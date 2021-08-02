@@ -1,11 +1,11 @@
-import { Flex, Text, Input, Icon } from '@chakra-ui/react';
-import { RiSearchLine } from 'react-icons/ri';
+import { Flex, Text, Input, Icon, HStack, Box, Avatar } from '@chakra-ui/react';
+import { RiNotificationLine, RiSearchLine, RiUserLine } from 'react-icons/ri';
 
 export function Header() {
   return (
     <Flex
       as="header"
-      w="100%"
+      w="90%"
       maxW={1480}
       h="20"
       mx="auto"
@@ -42,6 +42,33 @@ export function Header() {
           mr="4"
         />
         <Icon as={RiSearchLine} fontSize="20" />
+      </Flex>
+      <Flex align="center" ml="auto">
+        <HStack
+          spacing="8"
+          mx="8"
+          pr="8"
+          py="1"
+          color="gray.300"
+          borderRightWidth={1}
+          borderColor="gray.700"
+        >
+          <Icon as={RiNotificationLine} />
+          <Icon as={RiUserLine} />
+        </HStack>
+        <Flex align="center">
+          <Box mr="4" textAlign="right">
+            <Text>Pedro Abreu</Text>
+            <Text color="gray.300" fontSize="sm">
+              pedroliveirabreu@gmail.com
+            </Text>
+          </Box>
+          <Avatar
+            size="md"
+            name="Pedro Abreu"
+            src="https://github.com/Pedroabreu155.png"
+          />
+        </Flex>
       </Flex>
     </Flex>
   );
