@@ -5,11 +5,12 @@ import { Box, Flex, SimpleGrid, Text, theme } from '@chakra-ui/react';
 const Chart = dynamic(() => import('react-apexcharts'), {
   ssr: false,
 });
+import { ApexOptions } from 'apexcharts';
 
 import { Header } from '../components/Header';
 import { Sidebar } from '../components/Sidebar';
 
-const chartOptions1 = {
+const chartOptions1: ApexOptions = {
   chart: {
     toolbar: {
       show: false,
@@ -61,7 +62,7 @@ const chartOptions1 = {
   },
 };
 
-const chartOptions2 = {
+const chartOptions2: ApexOptions = {
   chart: {
     toolbar: {
       show: false,
